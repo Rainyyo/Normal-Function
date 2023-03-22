@@ -22,6 +22,7 @@ namespace Normal__Function
                 DXHIni.WritePrivateProfileString("参数", "波特率", baudRate.ToString(), GlobalFile);
             }
         }
+          
 
         public static void LoadIni()
         {
