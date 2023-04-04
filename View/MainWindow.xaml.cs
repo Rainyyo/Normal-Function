@@ -22,6 +22,12 @@ namespace Normal__Function.View
         public MainWindow()
         {
             InitializeComponent();
+            Global.LoadIni();
+            mainWindowViewModel= new MainWindowViewModel();
+            this.DataContext = mainWindowViewModel;
         }
+
+        private MainWindowViewModel mainWindowViewModel;
+        //private MB_TCP mbTcp=new MB_TCP();
     }
 }

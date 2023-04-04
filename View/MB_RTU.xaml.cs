@@ -26,12 +26,12 @@ namespace Normal__Function.View
         public MB_RTU()
         {
             InitializeComponent();
-            this.DataContext = mbRtuViewModel;
+            //this.DataContext = mbRtuViewModel;
         }
 
-        MB_RTU_ViewModel mbRtuViewModel=new MB_RTU_ViewModel();
-        //private SerialPort serialPort = new SerialPort();
-        private DXH.Modbus.DXHModbusRTU modbus;
+        //MB_RTU_ViewModel mbRtuViewModel=new MB_RTU_ViewModel();
+        ////private SerialPort serialPort = new SerialPort();
+        //private DXH.Modbus.DXHModbusRTU modbus;
         //private void Scan_Click(object sender, RoutedEventArgs e)
         //{
         //    string[] Ports = SerialPort.GetPortNames();

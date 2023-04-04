@@ -38,7 +38,7 @@ namespace Normal__Function.ViewModel
 
         public string NowState
         {
-            get { return nowstate="点击连接"; }
+            get { return nowstate; }
             set
             {
                 nowstate = value;
@@ -60,9 +60,14 @@ namespace Normal__Function.ViewModel
 
         public void Action(string param)
         {
-            if (param == "Show")
+            if (param == "Scan")
             {
                 Scan();
+            }
+
+            if (param=="State")
+            {
+                State();
             }
         }
         /// <summary>
@@ -86,7 +91,6 @@ namespace Normal__Function.ViewModel
             {
                 if (modbus == null)
                 {
-                    Global.LoadIni();
                     modbus = new DXHModbusRTU(SelectedItem, Global.BaudRate);
                     modbus.StartConnect();
                     modbus.ConnectStateChanged += Modbus_ConnectStateChanged; ;

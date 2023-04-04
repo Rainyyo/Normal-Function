@@ -8,11 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
       <TabControl>
-          <!--<TabItem Header="Port">
+          <TabItem Header="Port">
               <local:Port_Test/>
-          </TabItem>-->
-          <TabItem Header="ModBus_RTU">
-                <local:MB_RTU/>
+          </TabItem>
+          <TabItem Header="ModBus_RTU" HorizontalAlignment="Right" Margin="0,-2,-2,0">
+              <local:MB_RTU DataContext="{Binding MbRtuViewModel}"/>
+          </TabItem>
+          <TabItem Header="ModBus_TCP">
+                <local:MB_TCP DataContext="{Binding MbTcpViewModel }"/>
           </TabItem>
       </TabControl>
     </Grid>

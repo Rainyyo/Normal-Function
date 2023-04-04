@@ -60,6 +60,7 @@
     <Compile Include="Model\LogMessage.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\MB_RTU_ViewModel.cs" />
+    <Compile Include="ViewModel\MB_TCP_ViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -70,6 +71,9 @@
     <Compile Include="View\MB_RTU.xaml.cs">
       <DependentUpon>MB_RTU.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MB_TCP.xaml.cs">
+      <DependentUpon>MB_TCP.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Port_Test.xaml.cs">
       <DependentUpon>Port_Test.xaml</DependentUpon>
     </Compile>
@@ -78,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MB_RTU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MB_TCP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
