@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Normal__Function.ViewModel;
 
 namespace Normal__Function.View
 {
@@ -22,7 +23,5 @@ namespace Normal__Function.View
         {
             InitializeComponent();
         }
-
-
     }
 }

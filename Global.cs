@@ -23,7 +23,6 @@ namespace Normal__Function
             }
         }
           
-
         public static void LoadIni()
         {
             if (File.Exists(GlobalFile))

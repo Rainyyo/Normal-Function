@@ -8,11 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
       <TabControl>
-          <TabItem Header="Port">
+          <!--<TabItem Header="Port">
               <local:Port_Test/>
-          </TabItem>
+          </TabItem>-->
           <TabItem Header="ModBus_RTU">
-              <local:MB_RTU/>
+                <local:MB_RTU/>
           </TabItem>
       </TabControl>
     </Grid>
