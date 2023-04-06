@@ -27,16 +27,6 @@ namespace Normal__Function.View
             //mbTcpViewModel = new MB_TCP_ViewModel();
             //this.DataContext = mbTcpViewModel;
         }
-
         //private MB_TCP_ViewModel mbTcpViewModel;
-        //private void TextBox_OnSizeChanged(object sender, SizeChangedEventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //private void TextBox_OnSelectionChanged(object sender, RoutedEventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
