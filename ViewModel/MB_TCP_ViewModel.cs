@@ -12,10 +12,7 @@ namespace Normal__Function.ViewModel
 {
     public class MB_TCP_ViewModel:ViewModelBase
     {
-        public MB_TCP_ViewModel()
-        {
-            //IPAddress = Global.MB_IPAddress;
-        }
+        
         private DXH.Modbus.DXHModbusTCP mbModbusTcp;
 
         private string ipAddress=Global.MB_IPAddress;
@@ -39,6 +36,19 @@ namespace Normal__Function.ViewModel
                 OnPropertyChanged("NowState");
             }
         }
+        private bool tcpState=false;
+
+        public bool TCPState
+        {
+            get { return tcpState; }
+            set
+            {
+                tcpState = value;
+                OnPropertyChanged("TCPState");
+            }
+        }
+
+
 
         RelayCommand _ActionCommand;
         public ICommand ActionCommand
@@ -81,7 +91,8 @@ namespace Normal__Function.ViewModel
                 {
                     mbModbusTcp = new DXHModbusTCP(Global.MB_IPAddress);
                     mbModbusTcp.StartConnect();
-                    mbModbusTcp.ConnectStateChanged += Modbus_ConnectStateChanged; 
+                    mbModbusTcp.ConnectStateChanged += Modbus_ConnectStateChanged;
+                    mbModbusTcp.ModbusStateChanged += MbModbusTcp_ModbusStateChanged;
                 }
             }
             catch
@@ -89,6 +100,12 @@ namespace Normal__Function.ViewModel
 
             }
         }
+
+        private void MbModbusTcp_ModbusStateChanged(object sender, bool e)
+        {
+            TCPState = e;
+        }
+
         private void Modbus_ConnectStateChanged(object sender, string e)
         {
             NowState = e;
