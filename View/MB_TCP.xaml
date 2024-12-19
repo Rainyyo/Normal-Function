@@ -81,6 +81,40 @@
                 </Grid>
             </GroupBox>
             <!--<Button Name="sending"  Grid.Row="1" Height="30" Width="100" Content="发送" ></Button>-->
+            <GroupBox Grid.Row="1" Header="绑定按钮的文字属性的触发器">
+                <Ellipse  Width="100" Height="100">
+                    <Ellipse.Style>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="Fill" Value="Red"></Setter>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=Connect,Path=Content}" Value="已连接">
+                                    <Setter Property="Fill" Value="Green"></Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=Connect,Path=Content}" Value="Closed">
+                                    <Setter Property="Fill" Value="Red"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Ellipse.Style>
+                </Ellipse>
+            </GroupBox>
+            <GroupBox Grid.Row="2" Header="绑定状态属性的触发器">
+                <Ellipse  Width="50" Height="50">
+                    <Ellipse.Style>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="Fill" Value="Red"></Setter>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding TCPState}" Value="true">
+                                    <Setter Property="Fill" Value="GreenYellow"></Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding TCPState}" Value="false">
+                                    <Setter Property="Fill" Value="OrangeRed"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Ellipse.Style>
+                </Ellipse>
+            </GroupBox>
         </Grid>
     </Grid>
 </UserControl>
