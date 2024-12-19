@@ -111,46 +111,5 @@ namespace Normal__Function.Model
             await Task_SaveLog;
         }
         #endregion
-
-        #region 创建.CSV
-        /////<summary>
-        ///// 创建.csv文件
-        ///// </summary>
-        //static object SAVEPianYiLock = new object();
-        //public static async void SaveDataCSV(string DianYa, string DianLiu, int mIndex)
-        //{
-        //    Task Task_Save = Task.Run(() =>
-        //    {
-        //        lock (SAVEPianYiLock)
-        //        {
-        //            System.IO.DirectoryInfo LocalDir = new System.IO.DirectoryInfo("D:\\电流电压记录\\");
-        //            try
-        //            {
-        //                LocalDir.Create();
-        //            }
-        //            catch
-        //            {
-        //            }
-        //            try
-        //            {
-
-        //                string mLocalFile = LocalDir.FullName + DateTime.Today.ToString("yyyyMMdd") + "_" + mIndex + ".csv";
-        //                string mLocalData = DateTime.Now.ToString("HH:mm:ss") + "," + DianYa + "," + DianLiu;
-        //                if (!System.IO.File.Exists(mLocalFile))
-        //                {
-        //                    string mHeader = @"时间,电压,电流";
-        //                    System.IO.File.WriteAllText(mLocalFile, mHeader, Encoding.Default);
-        //                }
-        //                System.IO.File.AppendAllText(mLocalFile, Environment.NewLine + mLocalData, Encoding.Default);
-
-        //            }
-        //            catch
-        //            {
-        //            }
-        //        }
-        //    });
-        //    await Task_Save;
-        //}
-        #endregion
     }
 }
