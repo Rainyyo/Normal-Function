@@ -64,12 +64,9 @@
                         <Button x:Name="ShoutDown"  Grid.Column="1" Content="断开连接" Margin="0,10,0,-14"
                                 Command="{Binding ActionCommand}" CommandParameter="ShoutDown">
                             <Button.Style>
-                                <!--先绑定目标的格式-->
                                 <Style TargetType="{x:Type Button}">
-                                    <!--设置按钮的属性，他的"Visibility"属性是"Collapsed"-->
                                     <Setter Property="Visibility" Value="Collapsed"></Setter>
                                     <Style.Triggers>
-                                        <!--通过绑定"Connect"按钮的"Content"显示的文本进行相应的出发效果-->
                                         <DataTrigger Binding="{Binding ElementName=Connect,Path=Content}" Value="已连接">
                                             <Setter Property="Visibility" Value="Visible"></Setter>
                                         </DataTrigger>
